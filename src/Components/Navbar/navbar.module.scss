@@ -1,0 +1,140 @@
+@import '../../styles/variables';
+
+.navbarcontainer{
+    height: 50px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+
+    @media (max-width: 768px) {
+        max-width: 768px;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .logo{
+        width: 50px;
+        height: 50px;
+    }
+
+    .navbar{
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+        gap: 30px;
+        height: 100%;
+        @media (max-width: 768px) {
+            height: max-content;
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            background-color: $light-color;
+            &.open{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px 0;
+                position: absolute;
+                left:-0px;
+                top: 50px;
+                width: 100vw;
+            }
+        }
+
+        a{
+            cursor: pointer;
+            list-style: none;
+            text-decoration: none;
+            color: $white-color;
+
+           
+        }
+
+        div{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            border-radius: 10px;
+            &:hover{
+                background-color: $dark-color;
+            }
+
+            @media (max-width: 768px){
+                height: 50px;
+                width: 100%;
+                justify-content: center ;
+            }
+        }
+
+        div:has(.active){
+            background-color: $dark-color;
+        }
+    }
+
+
+    .navbtn{
+        
+        @media (max-width: 768px) {
+            display: flex;
+        }
+
+        display:none;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        
+        &.open{
+            .hamburguer{
+                transform: translateX(-21px);
+                background-color: transparent;
+                box-shadow: none;
+
+                &::before{
+                    transform: rotate(45deg) translate(15px, -15px);
+                }
+
+                &::after{
+                    transform: rotate(-45deg) translate(15px, 15px);
+                }
+            }
+        }
+        
+        .hamburguer{
+            width: 20px;
+            height: 3px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+            transition: all .5s ease-in-out;
+            pointer-events: none;
+
+            &::before, &::after{
+                content: "";
+                position: absolute;
+                width: 20px;
+                height: 3px;
+                background: white;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+                transition: all .5s ease-in-out;
+            }
+    
+            &::before{
+               transform: translateY(-10px);
+            }
+    
+            &::after{
+                transform: translateY(10px);
+             }
+        }   
+    }
+}
+
+
