@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint:js": "next lint",
+    "lint:css": "stylelint --allow-empty-input \"**/*.{css,scss}\""
   },
   "dependencies": {
     "@types/node": "20.4.5",
@@ -19,5 +20,9 @@
     "react-dom": "18.2.0",
     "sass": "^1.64.1",
     "typescript": "5.1.6"
+  },
+  "devDependencies": {
+    "stylelint": "^15.10.2",
+    "stylelint-config-standard-scss": "^10.0.0"
   }
 }
