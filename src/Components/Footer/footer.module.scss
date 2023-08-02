@@ -1,3 +1,39 @@
+@import '../../styles/variables';
+
+$footer-height: 150px;
+
 .footer{
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid black;
+    z-index: 1;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    height: min($footer-height, max-content);
+    color: $white-color;
+    
+    .mainfooter{
+        width: 100vw;
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+        padding-bottom: 30px;
+        @media (max-width: $mobile-query) {
+            max-width: 768px;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding-bottom: 30px;
+        }
+    
+        .column{
+    
+            li{
+                list-style: none;
+            }
+        }
+    }
 }

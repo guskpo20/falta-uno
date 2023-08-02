@@ -2,6 +2,7 @@ import './globals.scss'
 import type { Metadata } from 'next'
 
 import Navbar from '@/Components/Navbar/Navbar'
+import Footer from '@/Components/Footer/Footer'
 
 export const metadata: Metadata = {
   title: 'Falta Uno',
@@ -17,7 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbar/>
-        {children}</body>
+        {children}
+        <Footer/>
+        </body>
     </html>
   )
 }
