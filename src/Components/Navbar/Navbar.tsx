@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
 
-import Logo from "../../../public/logo.jpg"
+import Logo from "../../../public/logo.png"
 import styles from "./navbar.module.scss"
 
 const Navbar = () => {
@@ -24,6 +24,12 @@ const Navbar = () => {
         <div className={`${styles.navbar} ${navbarOpen ? styles.open : " "}`}>
             <div>
                 <Link className={currentRoute == "/" ? styles.active : ""} href="/">Inicio</Link>
+            </div>
+            <div>
+                <Link className={currentRoute == "/search" ? styles.active : ""} href="/search">Buscar</Link>
+            </div>
+            <div>
+                <Link className={currentRoute == "/fields" ? styles.active : ""} href="/fields">Canchas</Link>
             </div>
             <div>
                 <Link className={currentRoute == "/about" ? styles.active : ""} href="/about">Sobre Nosotros</Link>

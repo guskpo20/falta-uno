@@ -1,7 +1,7 @@
 @import '../../styles/variables';
 
 .navbarcontainer{
-    height: 50px;
+    height: 60px;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -30,15 +30,14 @@
             display: none;
             flex-direction: column;
             gap: 10px;
-            background-color: $light-color;
             &.open{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                padding: 10px 0;
+                padding: 0px 0;
                 position: absolute;
-                left:-0px;
                 top: 50px;
+                background-color: $dark-color;  
                 width: 100vw;
             }
         }
@@ -48,8 +47,6 @@
             list-style: none;
             text-decoration: none;
             color: $white-color;
-
-           
         }
 
         div{
@@ -58,19 +55,58 @@
             align-items: center;
             padding: 0 10px;
             border-radius: 10px;
+            position: relative;
+
+            &:has(.active){
+                a::after{
+                    content: "";
+                    position: absolute;
+                    left:0;
+                    bottom: 10px;
+                    width: 20px;
+                    height: 3px;
+                    background-color: $important-color;
+                    border-radius: 5px;
+                }   
+            }
+
             &:hover{
-                background-color: $dark-color;
+                a::after, div:has(.active){
+                    content: "";
+                    position: absolute;
+                    left:0;
+                    bottom: 10px;
+                    width: 100%;
+                    height: 3px;
+                    background-color: $important-color;
+                    border-radius: 5px;
+                }
             }
 
             @media (max-width: 768px){
                 height: 50px;
-                width: 100%;
                 justify-content: center ;
+                &:has(.active){
+                    a::after{
+                        content: none;
+                    }   
+                    background-color: $important-color;
+                }
+    
+                &:hover{
+                    a::after, div:has(.active){
+                        content: "";
+                        position: absolute;
+                        left:0;
+                        bottom: 10px;
+                        width: 100%;
+                        height: 3px;
+                        background-color: $important-color;
+                        border-radius: 5px;
+                        transition: width .5s;
+                    }
+                }
             }
-        }
-
-        div:has(.active){
-            background-color: $dark-color;
         }
     }
 
@@ -109,18 +145,20 @@
         .hamburguer{
             width: 20px;
             height: 3px;
-            background-color: white;
+            background-color: $main-color;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
             transition: all .5s ease-in-out;
             pointer-events: none;
+            position: absolute;
+            right: 0;
 
             &::before, &::after{
                 content: "";
                 position: absolute;
                 width: 20px;
                 height: 3px;
-                background: white;
+                background: $main-color;
                 border-radius: 5px;
                 box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
                 transition: all .5s ease-in-out;
