@@ -3,13 +3,29 @@
 } */
 @import '../styles/variables';
 
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: $white-color;
 }
 
 body{
   background-color: $dark-color;
+  max-width: 1440px;
+  display: grid;
+  grid-template-rows: $navbar-height max-content $footer-height;
+  margin: 0 auto;
+
+  @media (max-width: $mobile-query) {
+    width: calc(100% - 50px);
+    grid-template-rows: $navbar-height max-content max-content;
+  }
+
+  section{
+    max-width: 1440px;
+    width: 100%;
+  }
 }

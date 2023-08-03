@@ -1,10 +1,11 @@
 @import '../../styles/variables';
 
-$navbar-height: 60px;
+
 
 .navbarcontainer{
     height: $navbar-height;
-    width: 100vw;
+    max-width: 1440px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -50,7 +51,6 @@ $navbar-height: 60px;
             cursor: pointer;
             list-style: none;
             text-decoration: none;
-            color: $white-color;
         }
 
         div{
