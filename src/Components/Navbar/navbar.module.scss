@@ -1,5 +1,7 @@
 @import '../../styles/variables';
 
+//escribime un mediaquery que con min y max width que se llame mobile-query y que tenga un valor de 768px
+
 
 
 .navbarcontainer{
@@ -8,8 +10,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    
+    justify-content: space-between;
 
     @media (max-width: $mobile-query) {
         max-width: 768px;

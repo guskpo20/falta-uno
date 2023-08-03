@@ -4,6 +4,9 @@ import styles from "./footer.module.scss"
 
 const Footer = () => {
 
+  const date = new Date()
+  const year = date.getFullYear()
+
   return (
     <div className={`${styles.footer}`}>
       <div className={`${styles.mainfooter}`}>
@@ -17,7 +20,7 @@ const Footer = () => {
        </div>
        <div className={`${styles.column}`}>
         <ul>
-          <li><h3>Segund Columna</h3></li>
+          <li><h3>Segunda Columna</h3></li>
           <li><p>Texto</p></li>
           <li><p>Texto</p></li>
           <li><p>Texto</p></li>
@@ -32,7 +35,7 @@ const Footer = () => {
         </ul>
        </div>
       </div>
-      <p>&copy; Gustavo Keymetlian All right reserved 2023</p>
+      <p>&copy; Gustavo Keymetlian All right reserved {year} </p>
     </div>
   )
 }

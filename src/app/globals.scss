@@ -19,13 +19,18 @@ body{
   grid-template-rows: $navbar-height max-content $footer-height;
   margin: 0 auto;
 
+  @media (min-width: $mobile-query) and (max-width: 1440px){
+    padding: 0 20px;
+  }
+
   @media (max-width: $mobile-query) {
     width: calc(100% - 50px);
     grid-template-rows: $navbar-height max-content max-content;
   }
 
-  section{
+  #main-section{
     max-width: 1440px;
     width: 100%;
+    
   }
 }
