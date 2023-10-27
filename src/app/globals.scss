@@ -13,9 +13,10 @@
 }
 
 body{
+  padding-top: 20px;
   background: rgb(2,0,36);
   background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(69,9,128,1) 100%);
-  max-width: 1440px;
+  max-width: 1200px;
   display: grid;
   grid-template-rows: $navbar-height max-content $footer-height;
   margin: 0 auto;
@@ -31,8 +32,130 @@ body{
   }
 
   #main-section{
-    max-width: 1440px;
+    max-width: 1200px;
     width: 100%;
+  }
+}
+
+.main-hero{
+  height: 100vh;
+  margin-top: 10px;
+  
+  @media (max-width: 1200px) {
+    height: 100%;
+  }
+}
+
+.hero{
+  height: auto;
+  display: grid;
+  grid-template-areas: 
+            "a b c"
+            "d e f";
+  grid-template-columns: 400px 400px 400px;
+  align-items: center;
+
+  .playerCard{
+    grid-area: a;
+    margin: 30px auto;
+  }
+  .teamCard{
+    grid-area: b;
+    margin: 0 auto;
+    margin: 30px auto;
+  }
+  .fieldCard{
+    grid-area: c;
+    margin: 0 auto;
+    margin: 30px auto;
+  }
+  .playerDescription{
+    grid-area: d;
+    width: 300px;
+    margin: 0 auto;
+  }
+  .teamDescription{
+    grid-area: e;
+    width: 300px;
+    margin: 0 auto;
+  }
+  .fieldDescription{
+    grid-area: f;
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1200px) {
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+    grid-template-areas: 
+            "a d"
+            "b e"
+            "c f";
+    .playerCard{
+      grid-area: a;
+      margin: 0 auto;
+    }
+    .teamCard{
+      grid-area: b;
+      margin: 0 auto;
+    }
+    .fieldCard{
+      grid-area: c;
+      margin: 0 auto;
+    }
+    .playerDescription{
+      grid-area: d;
+      max-width: 300px;
+      width: auto;
+      margin: 0 auto;
+    }
+    .teamDescription{
+      grid-area: e;
+      max-width: 300px;
+      width: auto;
+      margin: 0 auto;
+    }
+    .fieldDescription{
+      grid-area: f;
+      max-width: 300px;
+      width: auto;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 550px) {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
     
+    .playerCard{
+      
+      margin: 0 auto;
+    }
+    .teamCard{
+      margin: 0 auto;
+    }
+    .fieldCard{
+      margin: 0 auto;
+    }
+    .playerDescription{
+      max-width: 300px;
+      padding:0 10px;
+      width: auto;
+      margin: 0 auto;
+    }
+    .teamDescription{
+      max-width: 300px;
+      width: auto;
+      margin: 0 auto;
+    }
+    .fieldDescription{
+      max-width: 300px;
+      width: auto;
+      margin: 0 auto;
+    }
   }
 }

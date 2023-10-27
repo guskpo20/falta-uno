@@ -1,0 +1,75 @@
+
+.card{
+    position: relative;
+    width: 300px;
+    height:400px;
+    background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(69,9,128,1) 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 10px;
+    .topGrid{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        .player_img{
+            position: absolute;
+            right:0;
+            top:5px;
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+        }
+        .information{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 300px;
+            gap:20px;
+            padding: 10px 0 10px 10px;
+
+            .teamName{
+                width: 100px;
+            }
+            
+            .position{
+                display: flex;
+                align-items: center;
+                font-size: .8rem;
+            }
+        }
+    }
+    .bottomGrid{
+        position:absolute;
+        bottom:0;
+        left:0;
+        width: 300px;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 10px 0;
+
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 5px;
+            border-top-right-radius: 16px;
+            border-top-left-radius: 16px;
+            background-color: rgba(73, 73, 73, 0.8);
+            width: 80px;
+
+            background: rgba(69,9,128,0.8);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            
+            :nth-child(2){
+                text-align: right;
+            }
+        }
+
+    }
+}
