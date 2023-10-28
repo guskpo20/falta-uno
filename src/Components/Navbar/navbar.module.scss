@@ -20,7 +20,8 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(17.8px);
     -webkit-backdrop-filter: blur(17.8px);
-    
+    z-index: 2;
+
     .nameNavClose{
         display: none;
     }
@@ -29,7 +30,9 @@
         max-width: 768px;
         width: 100%;
         justify-content: space-around;
-
+        border-radius: 0;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
         .nameNavClose{
             display: block;
             font-size: 29px;
@@ -79,10 +82,14 @@
                 justify-content: center;
                 align-items: center;
                 padding: 0;
+                height: 400px;
                 position: absolute;
                 top: $navbar-height;
-                background-color: $dark-color; 
-                width: 100vw;
+                background-color: #282444; 
+                width: 100%;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(17.8px);
+                -webkit-backdrop-filter: blur(17.8px);
             }
         }
 

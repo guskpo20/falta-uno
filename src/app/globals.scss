@@ -21,6 +21,9 @@ body{
   grid-template-rows: $navbar-height max-content $footer-height;
   margin: 0 auto;
   justify-content: center;
+  position:relative;
+  min-height: 100vh;
+  height: max-content;
 
   @media (min-width: $mobile-query) and (max-width: 1440px){
     padding: 0 20px;
@@ -38,7 +41,6 @@ body{
 }
 
 .main-hero{
-  height: 100vh;
   margin-top: 10px;
   
   @media (max-width: 1200px) {
