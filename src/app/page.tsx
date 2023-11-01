@@ -5,6 +5,7 @@ import Hero from '@/Components/Hero/Hero'
 import { useState, useEffect } from 'react'
 
 import PlayerCard from "@/Components/PlayerCard/Playercard"
+import Teamcard from '@/Components/TeamCard/Teamcard'
 
 /* import fs from 'fs'
 import path from 'path' */
@@ -22,7 +23,7 @@ export default function Home() {
           </span>
           <p className='playerDescription'>Registrate y obtene tu carta de jugador para poder entrar a un club! Cada jugador puede pertencer a varios equipos.</p>
           <span className='teamCard'>
-            <PlayerCard />
+            <Teamcard />
           </span>
           <p className='teamDescription'>Despues de registarte podras registrar tu cuadro y unir a tus compañeros</p>
           <span className='fieldCard'>

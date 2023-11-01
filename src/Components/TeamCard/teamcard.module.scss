@@ -3,13 +3,22 @@
     position: relative;
     width: 300px;
     height:400px;
-    background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(69,9,128,1) 100%);
+    background: linear-gradient(180deg, rgba(26,35,62,.5) 0%, rgba(115,15,215,0.8) 100%);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border-radius: 10px;
     cursor: pointer;
+
+    .invisibleImg{
+        position: absolute;
+        right:0;
+        top:5px;
+        width: 100%;
+        height: 180px;
+        z-index: 20;
+    }
 
     .hoverImgOnly{
         z-index: 0;
@@ -34,47 +43,61 @@
             width: auto;
         }
     }
-
     .topGrid{
         position: relative;
         height: 100%;
         width: 100%;
         overflow: hidden;
-        .player_img{
-            position: absolute;
-            right:0;
-            top:5px;
-            max-width: 200px;
-            width: 100%;
-            height: auto;
-        }
-        .information{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+        gap: 10px;
+        .teamInfo{
+            padding-bottom: 10px;
+            max-height: 200px;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            height: 300px;
-            gap:20px;
-            padding: 10px 0 10px 10px;
-
-            .teamName{
-                width: 100px;
-            }
-            
-            .position{
+            justify-content: center;
+            align-items: center;
+            .shieldandShirt{
+                position: relative;
+                min-width: 150px;
+                width: 60%;
                 display: flex;
-                align-items: center;
-                font-size: .8rem;
+                justify-content: center;
+                padding-top: 0px;
+                .absoluteImage{
+                    position: absolute;
+                    left:0;
+                    bottom:0;
+                }
             }
 
-            .invisibleImg{
-                position: absolute;
-                right:0;
-                top:5px;
-                max-width: 200px;
-                width: 100%;
-                height: 100%;
-                z-index: 20;
+            .nameLocation{
+                padding-top: 5px;
+                line-height: 1;
+                text-align: center;
             }
+        }
+
+        .moreInfo{
+            width: 100%;
+            display: flex;
+            padding: 0 10px;
+            justify-content: space-between;
+        }
+
+        .btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(31, 41, 71);
+            color: white;
+            width: 200px;
+            height: 30px;
+            text-decoration: none;
+            border-radius: 15px;
         }
     }
     .bottomGrid{
@@ -97,8 +120,8 @@
             background-color: rgba(73, 73, 73, 0.8);
             width: 80px;
 
-            background: rgba(69,9,128,0.8);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            background: rgba(31, 41, 71, .7);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 1);
             backdrop-filter: blur(5px);
             -webkit-backdrop-filter: blur(5px);
             

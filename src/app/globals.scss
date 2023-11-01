@@ -55,7 +55,7 @@ body{
             "a b c"
             "d e f";
   grid-template-columns: 400px 400px 400px;
-  align-items: center;
+  align-items: top;
 
   .playerCard{
     grid-area: a;
