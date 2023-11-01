@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react'
 
 import PlayerCard from "@/Components/PlayerCard/Playercard"
 import Teamcard from '@/Components/TeamCard/Teamcard'
+import Fieldcard from "@/Components/FieldCard/Fieldcard"
+import Promo from '@/Components/Promo/Promo'
 
 /* import fs from 'fs'
 import path from 'path' */
@@ -17,6 +19,7 @@ export default function Home() {
   return (
     <>
       <div className="main-hero">
+        <Promo />
         <section className="hero">
           <span className='playerCard'>
             <PlayerCard />
@@ -27,7 +30,7 @@ export default function Home() {
           </span>
           <p className='teamDescription'>Despues de registarte podras registrar tu cuadro y unir a tus compañeros</p>
           <span className='fieldCard'>
-            <PlayerCard />
+            <Fieldcard />
           </span>
           <p className='fieldDescription'>Conoce las canchas, ubicaciones, precios, promociones y campeonatos</p>
         </section>
