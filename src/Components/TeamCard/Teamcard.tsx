@@ -4,7 +4,7 @@ import Shirt from "../../../public/camiseta.png"
 import Trofeo from "../../../public/trofeo.png"
 import Medalla from "../../../public/medalla.png"
 import Image from 'next/image';
-import HoverImage from "../../../public/escudo.png"
+import HoverImage from "../../../public/team.jpg"
 
 import { useState } from "react"
 
@@ -22,7 +22,7 @@ const Teamcard = () => {
 
         </div>
         <div className={`${styles.hoverImgOnly} ${imgHover ? styles.hovered : ""}`}>
-          <Image src={HoverImage} width={300} height={400} alt='Player'/>
+          <Image src={HoverImage} width={300} height={20} alt='Player'/>
         </div>
       <section  className={`${styles.topGrid}`}>
         <div className={`${styles.teamInfo}`}>
