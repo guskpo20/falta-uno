@@ -44,6 +44,7 @@ body{
   margin-top: 10px;
   
   @media (max-width: 1200px) {
+    
     height: 100%;
   }
 }
@@ -88,7 +89,8 @@ body{
   }
 
   @media (max-width: 1200px) {
-    height: 100%;
+    margin-top: 10px;
+    height: max-content;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 10px;
@@ -129,6 +131,7 @@ body{
   }
 
   @media (max-width: 550px) {
+    margin-top: 15px;
     display: flex;
     flex-direction: column;
     gap:20px;

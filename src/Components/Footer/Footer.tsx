@@ -35,7 +35,9 @@ const Footer = () => {
         </ul>
        </div>
       </div>
-      <p>&copy; Gustavo Keymetlian All right reserved {year} </p>
+      <div className={`${styles.copy}`}>
+        <p>&copy; Gustavo Keymetlian All right reserved {year} </p>
+      </div>
     </div>
   )
 }

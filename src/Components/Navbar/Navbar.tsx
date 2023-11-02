@@ -18,9 +18,6 @@ const Navbar = () => {
 
   return (
     <div className={`${styles.navbarcontainer}`}>
-        {/* <div className={`${styles.logo}`}>
-            <Image src={Logo} width={50} height={50} alt='Logo de la marca'/>
-        </div> */}
         <div className={`${styles.navbar} ${navbarOpen ? styles.open : " "}`}>
             <div className={`${styles.mobileHide}`}>
                 <Link className={`${styles.name}`} href="/">Falta Uno</Link>
