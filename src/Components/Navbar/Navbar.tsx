@@ -34,7 +34,7 @@ const Navbar = () => {
             <div>
                 <Link className={currentRoute == "/about" ? styles.active : ""} href="/about">Canchas</Link>
             </div>
-            <div>.
+            <div>
                 <Link className={`${styles.btn}`} href="/">INICIAR SESIÓN</Link>
             </div>
             <div>
